@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}
+    Вход
+{% endblock %}
+
+{% block extralinks %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/users_signup.css' %}">
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <form class="form-signin text-center">
+            {% csrf_token %}
+            <h1 class="h3 mb-3 font-weight-normal">Войдите в аккаунт</h1>
+            <label for="phone">Номер телефона:</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">+7</span>
+                </div>
+                <input type="tel" class="form-control  input_off" id="phone" name="phone_number"
+                       placeholder="(___) ___-__-__"
+                       data-phone-pattern>
+            </div>
+            <p id="error-phone" class="error-message off">Телефон указан неверно или пользователя с таким
+                номером не существует</p>
+
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required class="form-control  pass_input_off"
+                       placeholder="Введите пароль">
+            </div>
+            <p id="error-pass" class="error-message off">Что-то пошло не так, возможно вы неправильно написали пароль.
+                Проверьте раскладку, на котоой вы пишите и попробуйте снова.
+                Также вы можете поменять пароль нажав на кнопку забыл пароль
+            </p>
+            <button class="btn btn-lg btn-blue btn-block mt-5" type="submit">Войти</button>
+        </form>
+        <div class="forgot_password">
+            <a class="forgot_link" href="{% url 'forgot_password' %}">Забыли пароль?</a>
+        </div>
+        <hr id="line" class="off">
+        <p id="signup_warning" class=" text-center off signup_warning_txt">Если у вас нет аккаунта, вы можете
+            зарегистрироваться по кнопке ниже</p>
+        <a id="signup_btn" href="{% url 'signup' %}" class="btn btn-lg btn-primary mt-5 btn-blue register off">Зарегистрироваться</a>
+        {#    <a href="{% url 'password_reset' %}" class="btn btn-primary">Забыли пароль</a>#}
+    </div>
+    <div class="popup"><div class="close"></div></div>
+    <div class="end_popup"><div class="end_close"></div></div>
+
+
+
+
+    <script src="{% static 'js/response_signup.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/phone_number.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+  <div class="module">
+
+  <h1>Данные о состоянии пользователя</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Настроение</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for mood in user_moods %}
+          <tr>
+            <td>{{ mood.date }}</td>
+            <td>{{ mood.grade }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

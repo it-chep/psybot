@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Monster-Medium';
+    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Monster-Bold';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Monster-Light';
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+body {
+    font-family: Monster-Medium, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container{
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #132b8b;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a {
+    display: inline-block;
+    background-color: #132b8b;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+a:hover {
+    background-color: #0c1b59;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}

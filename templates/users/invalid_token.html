@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}
+<title>Регистрация</title>
+{% endblock %}
+
+{% block extralinks %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="register-container">
+  <div class="register-box">
+    <p>К сожалению, с регистрацией что-то пошло не по плану.</p>
+    <p>Обратитесь в техподдержку по кнопке ниже и напишите свой email.</p>
+    <button class="support-button">Обратиться в техподдержку</button>
+    <input type="email" placeholder="Email" class="email-input">
+  </div>
+</div>
+{% endblock %}

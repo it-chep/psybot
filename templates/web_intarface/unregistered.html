@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}
+    Онлайн тренажер счастья
+{% endblock %}
+
+{% block extralinks %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/unregistered.css' %}">
+
+{% endblock %}
+{% block content %}
+    <div class="container">
+    <h1>Добро пожаловать на сайт тренажера счастья!</h1>
+
+    {% if user.is_authenticated %}
+        <p>Вы авторизованы на сайте как {{ user.name }}.</p>
+        <a href="{% url 'logout' %}">Выйти</a>
+    {% else %}
+        <p>Вы не авторизованы на сайте. Пожалуйста, зарегистрируйтесь или войдите на сайт, чтобы получить доступ к
+            закрытым материалам.</p>
+        <a href="{% url 'login' %}">Войти</a>
+        <a href="{% url 'signup' %}">Зарегистрироваться</a>
+    {% endif %}<p>Если у вас возникли вопросы, пожалуйста, свяжитесь с нами:</p>
+    <ul>
+        <li>Email: happinesstrainer@yandex.ru</li>
+        <li>Телефон: +79826588317</li>
+    </ul>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для шапки */
+header {
+  background-color: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #132b8b;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header div a {
+  color: #fff;
+  background-color: #132b8b;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+}
+
+header div a:hover {
+  background-color: #061546;
+}
+
+/* Стили для основного контента */
+main {
+  padding: 50px;
+}
+
+main h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+main a {
+  color: #132b8b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+main a:hover {
+  color: #061546;
+}
+
+/* Стили для подвала */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}

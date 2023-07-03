@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Monster-Medium';
+    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Monster-Bold';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Monster-Light';
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.raiting_container {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    /*background-color: #4ac1f7;*/
+}
+
+.raiting_nav_bar {
+    font-family: Monster-Medium, sans-serif;
+    position: relative;
+    height: 50px;
+}
+
+.raiting_header {
+    font-family: Monster-Bold, sans-serif;
+    text-align: center;
+    height: 60px;
+    padding-top: 10px;
+}
+
+.line_container {
+    font-family: Monster-Medium, serif;
+    position: relative;
+    height: 30px;
+}
+
+.profile_name {
+    position: absolute;
+    left: 0;
+    width: 220px;
+    text-align: center;
+}
+
+.profile_level {
+    position: absolute;
+    left: 250px;
+    width: 69px;
+    text-align: center;
+}
+
+.profile_work {
+    position: absolute;
+    left: 400px;
+    width: 120px;
+    text-align: center;
+}
+
+.profile_job_title{
+    position: absolute;
+    left: 550px;
+    width: 150px;
+    text-align: center;
+}
+
+.profile_status {
+    position: absolute;
+    right: 300px;
+    width: 150px;
+    text-align: center;
+}
+
+.profile_raiting {
+    position: absolute;
+    right: 0;
+    width: 250px;
+    text-align: center;
+}
+

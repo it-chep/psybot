@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extralinks %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/raiting_styles.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="raiting_container">
+        <h1 class="raiting_header">Рейтинг пользователей</h1>
+        <div class="raiting_nav_bar">
+            <p class="profile_name">Имя</p>
+            <p class="profile_level">Уровень</p>
+            <p class="profile_work">Место работы</p>
+            <p class="profile_job_title">Должность</p>
+            <p class="profile_status">Статус</p>
+            <p class="profile_raiting">Рейтинг</p>
+        </div>
+        <div>
+            {% for profile in object_list %}
+                <div class="line_container">
+                    <p class="profile_name">{{ forloop.counter }}. {{ profile.name }}</p>
+                    <p class="profile_level">{{ profile.level }}</p>
+                    <p class="profile_work">{{ profile.job_place }}</p>
+                    <p class="profile_job_title">{{ profile.job_title }}</p>
+                    <p class="profile_status">{{ profile.user_status.name }}</p>
+                    <p class="profile_raiting">{{ profile.rating }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}
+    Вход через Телеграм
+{% endblock %}
+
+{% block extralinks %}
+    <link rel="stylesheet" type="text/css" href="{% static '' %}">
+{% endblock %}
+
+
+{% block content %}
+    <button id="tg_auth_btn" class="tg_auth_btn" type="submit">Авторизоваться на сайте</button>
+
+    <script src="{% static 'js/telegram_signin.js' %}"></script>
+
+{% endblock %}

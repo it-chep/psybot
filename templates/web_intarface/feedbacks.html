@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}
+    Обратная связь
+{% endblock %}
+
+{% block extralinks %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+    <h1>Отзывы</h1>
+	{% if reviews %}
+		{% for review in reviews %}
+			<h2>{{ review.date_added }}</h2>
+			<p>{{ review.text }}</p>
+			<p>Автор: {{ review.user }}</p>
+			<hr>
+		{% endfor %}
+	{% else %}
+		<p>Пока нет отзывов</p>
+	{% endif %}
+    </div>
+{% endblock %}
